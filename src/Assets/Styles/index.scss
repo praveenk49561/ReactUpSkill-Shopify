@@ -1,6 +1,8 @@
+@import './fonts.scss';
+
 body {
   margin: 0;
-  font-family: 'Open Sans Condensed', Arial, sans-serif;
+  font-family: 'OpenSans-redefined', sans-serif, 'Open Sans Condensed', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,3 +14,4 @@ code {
 
 @import '../../Components/Navbar/style.scss';
 @import '../../Container/HomePage/style.scss';
+@import '../../Components/CategoryCard/styles.scss';

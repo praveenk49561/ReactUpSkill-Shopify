@@ -1,3 +1,10 @@
 .basic-home-page {
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mens {
+    font-weight: 600;
 }
