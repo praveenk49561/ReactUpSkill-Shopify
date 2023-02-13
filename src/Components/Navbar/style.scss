@@ -3,3 +3,16 @@
     display: flex;
     justify-content: space-between;
 }
+.nav-item {
+    text-decoration: none;
+    margin: 0px 5px;
+    padding: 5px 0px;
+    color: black;
+}
+.nav-item-active {
+    border-bottom: 1px solid black;
+}
+
+.basic-logo {
+    cursor: pointer;
+}

@@ -1,17 +1,25 @@
+import { useRef } from 'react';
 import NavItem from './NavItem';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { ReactComponent as Logo } from '../../Assets/Images/Logo.svg'
 
 const Navbar = (params) => {
     const { } = params;
+    const navigate = useNavigate();
+    const timeoutId = useRef('');
+
+    const onLogoClick = () => {
+        navigate('');
+    }
 
     return <div className="basic-nav-bar">
-        <div>Icon</div>
+        <div className='basic-logo' onClick={onLogoClick}><Logo /></div>
         <div>
-            <NavItem className="">Shop</NavItem>
-            <NavItem className="">Contact</NavItem>
-            <NavItem className="">Signin</NavItem>
-            <NavItem className="">Icon</NavItem>
+            <NavLink to="/shop" className={({ isActive }) => isActive ? 'nav-item nav-item-active' : 'nav-item'}>Shop</NavLink>
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'nav-item nav-item-active' : 'nav-item'}>Contact</NavLink>
+            <NavLink to="/signin" className={({ isActive }) => isActive ? 'nav-item nav-item-active' : 'nav-item'}>Signin</NavLink>
         </div>
-    </div>
+    </div>;
 };
 
 export default Navbar;

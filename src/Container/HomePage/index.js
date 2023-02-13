@@ -1,5 +1,9 @@
 import CategoryCard from "../../Components/CategoryCard";
-import image from '../../Assets/Images/Image1.jpg';
+import Hats from "../../Assets/Images/Hats.jpg";
+import Jackets from "../../Assets/Images/Jackets.jpg";
+import Mens from "../../Assets/Images/Mens.jpg";
+import Womens from "../../Assets/Images/Womens.jpg";
+import Sneakers from "../../Assets/Images/Sneakers.jpg";
 
 const HomePage = (props) => {
 
@@ -8,35 +12,38 @@ const HomePage = (props) => {
             id: 1,
             name: 'HATS',
             subName: 'SHOP NOW',
-            url: image
+            url: Hats
         }, 
         {
             id: 2,
             name: 'JACKETS',
             subName: 'SHOP NOW',
-            url: ''
+            url: Jackets
         },
         {
             id: 3,
             name: 'SNEAKERS',
             subName: 'SHOP NOW',
-            url: ''
+            url: Sneakers
         },
         {
             id: 4,
-            name: `MEN'S`,
+            name: `WOMEN'S`,
             subName: 'SHOP NOW',
-            url: ''
+            url: Womens
         },
         {
             id: 5,
-            name: `WOMEN'S`,
+            name: `MEN'S`,
             subName: 'SHOP NOW',
-            url: ''
+            url: Mens
         }
     ];
 
-    const categoryElements = categoryItems?.map((eE) => <CategoryCard key={eE?.id} className={eE?.name === `MEN'S` && 'mens'} name={eE?.name} url={eE?.url} />);
+    const categoryElements = categoryItems?.map((eE) => {
+        const className = `grid-item-${eE?.id}`;
+        return <CategoryCard key={eE?.id} className={className} name={eE?.name} url={eE?.url} />;
+    });
 
     return <div className="basic-home-page">
         {categoryElements}
