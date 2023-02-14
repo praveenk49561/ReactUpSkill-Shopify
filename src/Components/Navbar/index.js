@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import NavItem from './NavItem';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { ReactComponent as Logo } from '../../Assets/Images/Logo.svg'
+import { ReactComponent as Logo } from '../../Assets/Images/Logo.svg';
+
 
 const Navbar = (params) => {
     const { } = params;
@@ -10,7 +10,7 @@ const Navbar = (params) => {
 
     const onLogoClick = () => {
         navigate('');
-    }
+    };
 
     return <div className="basic-nav-bar">
         <div className='basic-logo' onClick={onLogoClick}><Logo /></div>

@@ -7,11 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 @import '../../Components/Navbar/style.scss';
-@import '../../Container/HomePage/style.scss';
 @import '../../Components/CategoryCard/styles.scss';
+@import '../../Components/FormInput/styles.scss';
+@import '../../Components/Button/styles.scss';
+
+@import '../../Container/HomePage/style.scss';
+@import '../../Container/SigninPage/styles.scss';

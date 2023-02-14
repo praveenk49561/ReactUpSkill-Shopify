@@ -37,6 +37,12 @@ const HomePage = (props) => {
             name: `MEN'S`,
             subName: 'SHOP NOW',
             url: Mens
+        },
+        {
+            id: 6,
+            name: `MEN'S`,
+            subName: 'SHOP NOW',
+            url: Mens
         }
     ];
 
